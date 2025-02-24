@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(#333, #fff);
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    color: white;
+    text-align: center;
+    padding: 20pc;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+#p1 {
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    left: 7pc ;
+    top: 1pc;
+    color: #000;
+}
+#p2 {
+    font-size: 30px;
+    position: absolute;
+    left: 7pc;
+    top: 3.5pc;
+    color: #ffff00;
+}
+#logou{
+    width: 100px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+header nav {
+    display: flex;
+    position: absolute;
+    top: 32px;
+    gap: 20px;
+}
+#back{
+    width: 40pc;
+    position: absolute;
+    right: 3pc;
+    top: 7pc;
+    border-radius: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+header div {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    background: #000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    position: relative;
+    top: 10px;
+    justify-content: space-between;
+}
+button:hover {
+    background: #ffff00;
+    color:#000;
+}
+#cadastro{
+    position: absolute;
+    top: 23px;
+    right: 5.5pc;
+}
+#entrar{
+    position: absolute;
+    top: 23px;
+    right: 7px;
+}
+aside {
+    max-width: 500px;
+    position: absolute;
+    bottom: 10pc;
+    left: 5pc;
+    padding: 20px;
+    color: white;
+    border-radius: 10px; 
+}
+
+aside h1 {
+    font-size: 35px;
+    text-align: justify;
+}
+
+aside a {
+    display: inline-block;
+    margin-top: 15px;
+    background: #ffcc00;
+    padding: 10px 25px;
+    color: black;
+    text-decoration: none;
+    border-radius: 50px;
+    font-family: boxicons, sans-serif;
+}
+aside a i {
+    font-size: 28px;
+    position: relative;
+    top: 5px;
+}
+aside a:hover {
+    background: #e6b800;
+}
+span{
+    position: relative;
+    bottom: 2px;
+    left: 7px;
+    font-weight: bold;
+}
+
+main {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#servicos {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+#servicos a {
+    background: #333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#servicos a:hover {
+    background: #555;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+article {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+article img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+article h5 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+#preco {
+    font-weight: bold;
+    color: #d9534f;
+}
+
+article a {
+    display: block;
+    margin-top: 10px;
+    background: #ffcc00;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    transition: 0.3s;
+}
+
+article a:hover {
+    background: #e6b800;
+}
+
+footer {
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
