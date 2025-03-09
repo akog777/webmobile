@@ -9,6 +9,7 @@ body {
     background: linear-gradient(#333, #fff);
     color: #333;
     line-height: 1.6;
+    min-height: 100vh;
 }
 
 header {
@@ -20,14 +21,16 @@ header {
     justify-content: space-around;
     align-items: flex-start;
 }
+
 #p1 {
     font-size: 30px;
     font-weight: bold;
     position: absolute;
-    left: 7pc ;
+    left: 7pc;
     top: 1pc;
     color: #000;
 }
+
 #p2 {
     font-size: 30px;
     position: absolute;
@@ -35,7 +38,8 @@ header {
     top: 3.5pc;
     color: #ffff00;
 }
-#logou{
+
+#logou {
     width: 100px;
     position: absolute;
     top: 10px;
@@ -48,12 +52,14 @@ header nav {
     top: 32px;
     gap: 20px;
 }
-#back{
+
+#back {
     width: 40pc;
     position: absolute;
     right: 3pc;
     top: 7pc;
     border-radius: 10px;
+    max-width: 100%;
 }
 
 nav a {
@@ -66,6 +72,7 @@ nav a {
 nav a:hover {
     color: #ffcc00;
 }
+
 header div {
     display: flex;
     gap: 10px;
@@ -85,20 +92,24 @@ button {
     top: 10px;
     justify-content: space-between;
 }
+
 button:hover {
     background: #ffff00;
-    color:#000;
+    color: #000;
 }
-#cadastro{
+
+#cadastro {
     position: absolute;
     top: 23px;
     right: 5.5pc;
 }
-#entrar{
+
+#entrar {
     position: absolute;
     top: 23px;
     right: 7px;
 }
+
 aside {
     max-width: 500px;
     position: absolute;
@@ -106,7 +117,7 @@ aside {
     left: 5pc;
     padding: 20px;
     color: white;
-    border-radius: 10px; 
+    border-radius: 10px;
 }
 
 aside h1 {
@@ -124,15 +135,18 @@ aside a {
     border-radius: 50px;
     font-family: boxicons, sans-serif;
 }
+
 aside a i {
     font-size: 28px;
     position: relative;
     top: 5px;
 }
+
 aside a:hover {
     background: #e6b800;
 }
-span{
+
+span {
     position: relative;
     bottom: 2px;
     left: 7px;
@@ -154,6 +168,7 @@ h2 {
     justify-content: center;
     gap: 15px;
     margin-bottom: 30px;
+    flex-wrap: wrap;
 }
 
 #servicos a {
@@ -186,6 +201,7 @@ article {
 article img {
     max-width: 100%;
     border-radius: 10px;
+    height: auto;
 }
 
 article h5 {
@@ -220,4 +236,294 @@ footer {
     text-align: center;
     padding: 15px;
     margin-top: 30px;
+}
+
+/* Desktops (1024px e acima) */
+@media screen and (min-width: 1024px) {
+    /* Design original já é para desktop, mantive as configurações base */
+    header {
+        padding: 20pc;
+    }
+    
+    #back {
+        width: 40pc;
+    }
+    
+    aside {
+        bottom: 10pc;
+        left: 5pc;
+    }
+}
+
+/* Tablets (768px a 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Layout principal */
+    header { 
+        padding: 8pc 3pc; 
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Textos principais */
+    #p1, #p2 { 
+        font-size: 20px;
+        position: relative;
+        left: 0;
+        margin-bottom: 1pc;
+    }
+    
+    /* Imagem de fundo */
+    #back {
+        width: 50%;
+        max-width: 20pc;
+        position: absolute;
+        right: 2pc;
+        top: 6pc;
+        z-index: -1;
+        opacity: 0.9; /* Melhora a visibilidade do texto sobreposto */
+    }
+    
+    /* Botões de ação */
+    #cadastro, #entrar {
+        position: fixed;
+        top: 1pc;
+    }
+    #cadastro { right: 4pc; }
+    #entrar { right: 1pc; }
+    
+    /* Conteúdo lateral */
+    aside {
+        position: absolute;
+        left: 3pc;
+        bottom: 5pc;
+        max-width: 350px;
+        z-index: 1;
+        background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente para melhorar legibilidade */
+        padding: 1pc;
+        border-radius: 5px;
+    }
+    
+    /* Tipografia */
+    aside h1 { font-size: 26px; }
+    h2 { font-size: 32px; }
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        padding: 8pc 2pc 20pc;
+        flex-direction: column;
+    }
+    
+    #p1, #p2 {
+        font-size: 20px;
+    }
+    
+    #p1 {
+        left: 4.5pc;
+        top: 0.8pc;
+    }
+    
+    #p2 {
+        left: 4.5pc;
+        top: 2.5pc;
+    }
+    
+    #logou {
+        width: 70px;
+    }
+    
+    header nav {
+        position: relative;
+        top: 5pc;
+        left: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
+    #back {
+        width: 95%;
+        max-width: 20pc;
+        position: relative;
+        top: 7pc;
+        right: auto;
+        margin: 0 auto;
+    }
+    
+    #cadastro, #entrar {
+        position: static;
+        margin-top: 5pc;
+    }
+    
+    header div {
+        position: absolute;
+        top: 4pc;
+        right: 2pc;
+        flex-direction: column;
+    }
+    
+    aside {
+        position: relative;
+        bottom: auto;
+        left: 1pc;
+        right: 1pc;
+        max-width: 90%;
+        margin-top: -10pc;
+    }
+    
+    aside h1 {
+        font-size: 22px;
+    }
+    
+    h2 {
+        font-size: 30px;
+    }
+    
+    section {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Hide menu elements by default on larger screens */
+#menu-toggle, .menu-btn, .menu-overlay { display: none; }
+
+@media screen and (max-width: 480px) {
+    /* Hide text elements and show menu elements */
+    #p1, #p2 { display: none; }
+    #menu-toggle, .menu-btn, .menu-overlay { display: block; }
+    
+    /* Logo centering */
+    #logou {
+        width: 40px;
+        position: absolute;
+        left: 50%;
+        top: 15px;
+        transform: translateX(-50%);
+    }
+    
+    /* Hamburger menu structure */
+    #menu-toggle {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+    
+    .menu-btn {
+        position: absolute;
+        top: 15px;
+        left: 10px;
+        width: 50px;
+        height: 50px;
+        z-index: 10;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 8px;
+    }
+    
+    .menu-btn span {
+        display: block;
+        width: 100%;
+        height: 6px;
+        background-color: white;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+    
+    /* Navigation and overlay */
+    header nav {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100vh;
+        background-color: #333;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 60px 15px 15px;
+        gap: 15px;
+        z-index: 5;
+        transition: left 0.3s ease;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    header nav a {
+        color: white;
+        padding: 10px;
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        text-decoration: none;
+    }
+    
+    .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 4;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s, visibility 0.3s;
+    }
+    
+    /* Menu toggle states */
+    #menu-toggle:checked ~ nav { left: 0; }
+    #menu-toggle:checked ~ .menu-overlay { opacity: 1; visibility: visible; }
+    #menu-toggle:checked ~ .menu-btn span:nth-child(1) { transform: translateY(16px) rotate(45deg); }
+    #menu-toggle:checked ~ .menu-btn span:nth-child(2) { opacity: 0; }
+    #menu-toggle:checked ~ .menu-btn span:nth-child(3) { transform: translateY(-16px) rotate(-45deg); }
+    
+    /* Layout structure */
+    header {
+        padding: 8pc 2pc 2pc;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        min-height: 12pc;
+    }
+    
+    #back {
+        width: 90%;
+        max-width: 20pc;
+        margin: 5px auto 15px;
+        position: static;
+        order: 1;
+    }
+    
+    aside {
+        position: static;
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 15px;
+        order: 2;
+    }
+    
+    /* Button styling */
+    header div {
+        position: absolute;
+        top: 15px;
+        right: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    #cadastro, #entrar {
+        width: 100%;
+        padding: 4px 8px;
+        font-size: 11px;
+        margin-top: 0;
+    }
+    
+    button { padding: 6px 10px; font-size: 12px; }
+    
+    /* Text styling */
+    aside h1 { font-size: 20px; text-align: center; margin-top: 5px; }
+    aside a { margin-top: 10px; display: block; text-align: center; }
 }
