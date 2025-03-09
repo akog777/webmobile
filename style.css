@@ -238,9 +238,8 @@ footer {
     margin-top: 30px;
 }
 
-/* Desktops (1024px e acima) */
+/* Desktops (1024px e acima) - seu código original */
 @media screen and (min-width: 1024px) {
-    /* Design original já é para desktop, mantive as configurações base */
     header {
         padding: 20pc;
     }
@@ -262,50 +261,86 @@ footer {
         padding: 8pc 3pc; 
         display: flex;
         flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Barra de navegação */
+    nav {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 2pc;
+    }
+    
+    /* Logo */
+    #logou {
+        max-width: 80px;
+        height: auto;
+        position: absolute;
+        top: 1pc;
+        left: 1pc;
     }
     
     /* Textos principais */
     #p1, #p2 { 
         font-size: 20px;
-        position: relative;
-        left: 0;
-        margin-bottom: 1pc;
+        position: absolute;
+        left: 6pc; /* Position to the right of the logo */
+        text-align: left;
+        margin: 0;
+    }
+    
+    #p1 {
+        top: 1.5pc;
+    }
+    
+    #p2 {
+        top: 3.5pc;
     }
     
     /* Imagem de fundo */
     #back {
-        width: 50%;
-        max-width: 20pc;
+        width: 70%; /* Aumentado de 50% para 70% */
+        max-width: 27pc; /* Aumentado de 20pc para 30pc */
         position: absolute;
         right: 2pc;
         top: 6pc;
         z-index: -1;
-        opacity: 0.9; /* Melhora a visibilidade do texto sobreposto */
+        opacity: 0.9;
     }
     
     /* Botões de ação */
     #cadastro, #entrar {
         position: fixed;
         top: 1pc;
+        padding: 0.5pc 1pc;
+        margin-left: 0.5pc;
+        display: inline-block;
     }
-    #cadastro { right: 4pc; }
+    #cadastro { right: 8pc; }
     #entrar { right: 1pc; }
     
     /* Conteúdo lateral */
     aside {
         position: absolute;
         left: 3pc;
-        bottom: 5pc;
-        max-width: 350px;
+        bottom: -8pc;
+        max-width: 280px;
         z-index: 1;
-        background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente para melhorar legibilidade */
+        background-color: transparent;
         padding: 1pc;
         border-radius: 5px;
+        color: white;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
     }
     
     /* Tipografia */
-    aside h1 { font-size: 26px; }
-    h2 { font-size: 32px; }
+    aside h1 { 
+        font-size: 22px;
+    }
+    main {
+        margin-top: 150px; /* Margem para tablets */
+    }
 }
 
 @media screen and (max-width: 767px) {
