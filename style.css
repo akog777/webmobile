@@ -1,0 +1,578 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(#333, #fff);
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+header {
+    display: block;
+    position: relative;
+    padding: 20pc;
+}
+
+#p1, #p2 {
+    position: absolute;
+    left: 7pc;
+    font-size: 30px;
+}
+
+#p1 {
+    top: 1pc;
+    color: #000;
+    background-color: transparent; /* Corrigindo o fundo para evitar sobreposição indesejada */
+}
+
+#p2 {
+    top: 3.5pc;
+    color: #ffff00;
+    background-color: transparent; /* Corrigindo o fundo para evitar sobreposição indesejada */
+}
+
+#logou {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    gap: 20px;
+}
+
+#back {
+    position: absolute;
+    right: 3pc;
+    top: 7pc;
+    max-width: 100%;
+    width: 30%;
+    border-radius: 10px;
+    height: auto;
+    
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+header div {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    background: #000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ffff00;
+    color: #000;
+}
+
+#cadastro {
+    position: absolute;
+    top: 23px;
+    right: 5.5pc;
+}
+
+#entrar {
+    position: absolute;
+    top: 23px;
+    right: 7px;
+}
+
+aside {
+    max-width: 500px;
+    position: absolute;
+    bottom: 10pc;
+    left: 8pc;
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+    text-align: center; /* Adiciona a centralização */
+    
+}
+
+aside h1 {
+    font-size: 35px;
+    text-align: justify;
+}
+
+aside a {
+    display: inline-block; /* Já estava como inline-block, pode manter */
+    margin-top: 15px;
+    background: #ffcc00;
+    padding: 10px 25px;
+    color: black;
+    text-decoration: none;
+    border-radius: 50px;
+    font-family: boxicons, sans-serif;
+}
+
+aside a i {
+    font-size: 28px;
+    position: relative;
+    top: 5px;
+}
+
+aside a:hover {
+    background: #e6b800;
+}
+
+span {
+    position: relative;
+    bottom: 2px;
+    left: 7px;
+    font-weight: bold;
+}
+
+
+main {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#servicos {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+#servicos a {
+    background: #333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#servicos a:hover {
+    background: #555;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+article {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+article img {
+    max-width: 100%;
+    border-radius: 10px;
+    height: auto;
+}
+
+article h5 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+#preco {
+    font-weight: bold;
+    color: #d9534f;
+}
+
+article a {
+    display: block;
+    margin-top: 10px;
+    background: #ffcc00;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    transition: 0.3s;
+}
+
+article a:hover {
+    background: #e6b800;
+}
+
+footer {
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+/* Desktops (1024px e acima) - seu código original */
+@media screen and (min-width: 1024px) {
+    header {
+        padding: 20pc;
+    }
+
+    #back {
+        width: 40pc;
+    }
+
+    aside {
+        bottom: 10pc;
+        left: 5pc;
+    }
+}
+
+/* Tablets (768px a 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Layout principal */
+    header { 
+        padding: 8pc 3pc; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Barra de navegação */
+    nav {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 2pc;
+    }
+
+    /* Logo */
+    #logou {
+        max-width: 80px;
+        height: auto;
+        position: absolute;
+        top: 1pc;
+        left: 1pc;
+    }
+
+    /* Textos principais */
+    #p1, #p2 { 
+        font-size: 20px;
+        position: absolute;
+        left: 6pc; /* Posicionar à direita do logo */
+        text-align: left;
+        margin: 0;
+    }
+
+    #p1 {
+        top: 1.5pc;
+    }
+
+    #p2 {
+        top: 3.5pc;
+    }
+
+    /* Imagem de fundo */
+    #back {
+        width: 70%; /* Aumentado de 50% para 70% */
+        max-width: 27pc; /* Aumentado de 20pc para 30pc */
+        position: absolute;
+        right: 2pc;
+        top: 6pc;
+        z-index: -1;
+        opacity: 0.9;
+    }
+
+    /* Botões de ação */
+    #cadastro, #entrar {
+        position: fixed;
+        top: 1pc;
+        padding: 0.5pc 1pc;
+        margin-left: 0.5pc;
+        display: inline-block;
+    }
+    #cadastro { right: 8pc; }
+    #entrar { right: 1pc; }
+
+    /* Conteúdo lateral */
+    aside {
+        position: absolute;
+        left: 3pc;
+        bottom: -8pc;
+        max-width: 280px;
+        z-index: 1;
+        background-color: transparent;
+        padding: 1pc;
+        border-radius: 5px;
+        color: white;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Tipografia */
+    aside h1 { 
+        font-size: 22px;
+    }
+    main {
+        margin-top: 150px; /* Margem para tablets */
+    }
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        padding: 8pc 2pc 20pc;
+        flex-direction: column;
+    }
+
+    #p1, #p2 {
+        font-size: 20px;
+    }
+
+    #p1 {
+        left: 4.5pc;
+        top: 0.8pc;
+    }
+
+    #p2 {
+        left: 4.5pc;
+        top: 2.5pc;
+    }
+
+    #logou {
+        width: 70px;
+    }
+
+    header nav {
+        position: relative;
+        top: 5pc;
+        left: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    #back {
+        width: 95%;
+        max-width: 20pc;
+        position: relative;
+        top: 7pc;
+        right: auto;
+        margin: 0 auto;
+    }
+
+    #cadastro, #entrar {
+        position: static;
+        margin-top: 5pc;
+    }
+
+    header div {
+        position: absolute;
+        top: 4pc;
+        right: 2pc;
+        flex-direction: column;
+    }
+
+    aside {
+        position: relative;
+        bottom: auto;
+        left: 1pc;
+        right: 1pc;
+        max-width: 90%;
+        margin-top: -10pc;
+    }
+
+    aside h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    section {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Esconder elementos do menu por padrão em telas maiores */
+#menu-toggle, .menu-btn, .menu-overlay { display: none; }
+
+@media screen and (max-width: 500px) {
+    /* Esconder elementos de texto e mostrar elementos do menu */
+
+    body {
+         font-size: 14px; /* Ajustando para telas pequenas */
+    }
+    h2 {
+        font-size: 24px; /* Reduzindo o tamanho do título */
+    }
+
+    #p1, #p2 { display: none; }
+    #menu-toggle, .menu-btn, .menu-overlay { display: block; }
+
+    /* Centralização do logo */
+    #logou {
+        width: 40px;
+        position: absolute;
+        left: 50%;
+        top: 15px;
+        transform: translateX(-50%);
+    }
+
+    /* Estrutura do menu hambúrguer */
+    #menu-toggle {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    .menu-btn {
+        position: absolute;
+        top: 15px;
+        left: 10px;
+        width: 50px;
+        height: 50px;
+        z-index: 10;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 8px;
+    }
+
+    .menu-btn span {
+        display: block;
+        width: 100%;
+        height: 6px;
+        background-color: white;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+
+    /* Navegação e sobreposição */
+    header nav {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100vh;
+        background-color: #333;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 60px 15px 15px;
+        gap: 15px;
+        z-index: 5;
+        transition: left 0.3s ease;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    header nav a {
+        color: white;
+        padding: 10px;
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        text-decoration: none;
+    }
+
+    .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 4;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s, visibility 0.3s;
+    }
+
+    /* Estados do menu toggle */
+    #menu-toggle:checked ~ nav { left: 0; }
+    #menu-toggle:checked ~ .menu-overlay { opacity: 1; visibility: visible; }
+    #menu-toggle:checked ~ .menu-btn span:nth-child(1) { transform: translateY(16px) rotate(45deg); }
+    #menu-toggle:checked ~ .menu-btn span:nth-child(2) { opacity: 0; }
+    #menu-toggle:checked ~ .menu-btn span:nth-child(3) { transform: translateY(-16px) rotate(-45deg); }
+
+    /* Estrutura do layout */
+    header {
+        padding: 8pc 2pc 2pc;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        min-height: 12pc;
+    }
+
+    #back {
+        width: 90%;
+        max-width: 20pc;
+        margin: 5px auto 15px;
+        position: static;
+        order: 1;
+    }
+
+    aside {
+        position: static;
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 15px;
+        order: 2;
+    }
+
+    /* Estilo dos botões */
+    header div {
+        position: absolute;
+        top: 15px;
+        right: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #cadastro, #entrar {
+        width: 100%;
+        padding: 4px 8px;
+        font-size: 11px;
+        margin-top: 0;
+    }
+
+    button { padding: 6px 10px; font-size: 12px; }
+
+    /* Estilo do texto */
+    aside h1 { font-size: 20px; text-align: justify; margin-top: 5px; }
+    aside a { margin-top: 10px; text-align: center; }
+}
