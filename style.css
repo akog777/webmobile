@@ -27,13 +27,13 @@ header {
 #p1 {
     top: 1pc;
     color: #000;
-    background-color: transparent; /* Corrigindo o fundo para evitar sobreposição indesejada */
+    background-color: transparent;
 }
 
 #p2 {
     top: 3.5pc;
     color: #ffff00;
-    background-color: transparent; /* Corrigindo o fundo para evitar sobreposição indesejada */
+    background-color: transparent;
 }
 
 #logou {
@@ -62,7 +62,6 @@ header nav {
     width: 30%;
     border-radius: 10px;
     height: auto;
-    
 }
 
 nav a {
@@ -121,8 +120,7 @@ aside {
     padding: 20px;
     color: white;
     border-radius: 10px;
-    text-align: center; /* Adiciona a centralização */
-    
+    text-align: center;
 }
 
 aside h1 {
@@ -131,7 +129,7 @@ aside h1 {
 }
 
 aside a {
-    display: inline-block; /* Já estava como inline-block, pode manter */
+    display: inline-block;
     margin-top: 15px;
     background: #ffcc00;
     padding: 10px 25px;
@@ -157,7 +155,6 @@ span {
     left: 7px;
     font-weight: bold;
 }
-
 
 main {
     padding: 40px 20px;
@@ -202,6 +199,9 @@ article {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    max-width: 650px;
+    margin: 0 auto;
+    width: 90%;
 }
 
 article img {
@@ -235,7 +235,6 @@ article a {
 article a:hover {
     background: #e6b800;
 }
-
 footer {
     background: #000;
     color: white;
@@ -244,7 +243,6 @@ footer {
     margin-top: 30px;
 }
 
-/* Desktops (1024px e acima) - seu código original */
 @media screen and (min-width: 1024px) {
     header {
         padding: 20pc;
@@ -260,9 +258,7 @@ footer {
     }
 }
 
-/* Tablets (768px a 1023px) */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    /* Layout principal */
     header { 
         padding: 8pc 3pc; 
         display: flex;
@@ -270,7 +266,6 @@ footer {
         align-items: center;
     }
 
-    /* Barra de navegação */
     nav {
         display: flex;
         justify-content: center;
@@ -278,7 +273,6 @@ footer {
         margin-bottom: 2pc;
     }
 
-    /* Logo */
     #logou {
         max-width: 80px;
         height: auto;
@@ -287,11 +281,10 @@ footer {
         left: 1pc;
     }
 
-    /* Textos principais */
     #p1, #p2 { 
         font-size: 20px;
         position: absolute;
-        left: 6pc; /* Posicionar à direita do logo */
+        left: 6pc;
         text-align: left;
         margin: 0;
     }
@@ -304,10 +297,9 @@ footer {
         top: 3.5pc;
     }
 
-    /* Imagem de fundo */
     #back {
-        width: 70%; /* Aumentado de 50% para 70% */
-        max-width: 27pc; /* Aumentado de 20pc para 30pc */
+        width: 70%;
+        max-width: 27pc;
         position: absolute;
         right: 2pc;
         top: 6pc;
@@ -315,7 +307,6 @@ footer {
         opacity: 0.9;
     }
 
-    /* Botões de ação */
     #cadastro, #entrar {
         position: fixed;
         top: 1pc;
@@ -323,10 +314,10 @@ footer {
         margin-left: 0.5pc;
         display: inline-block;
     }
+    
     #cadastro { right: 8pc; }
     #entrar { right: 1pc; }
 
-    /* Conteúdo lateral */
     aside {
         position: absolute;
         left: 3pc;
@@ -340,12 +331,12 @@ footer {
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
     }
 
-    /* Tipografia */
     aside h1 { 
         font-size: 22px;
     }
+    
     main {
-        margin-top: 150px; /* Margem para tablets */
+        margin-top: 150px;
     }
 }
 
@@ -425,23 +416,20 @@ footer {
     }
 }
 
-/* Esconder elementos do menu por padrão em telas maiores */
 #menu-toggle, .menu-btn, .menu-overlay { display: none; }
 
-@media screen and (max-width: 500px) {
-    /* Esconder elementos de texto e mostrar elementos do menu */
 
+@media screen and (max-width: 500px) {
     body {
-         font-size: 14px; /* Ajustando para telas pequenas */
+         font-size: 14px;
     }
     h2 {
-        font-size: 24px; /* Reduzindo o tamanho do título */
+        font-size: 24px;
     }
 
     #p1, #p2 { display: none; }
     #menu-toggle, .menu-btn, .menu-overlay { display: block; }
 
-    /* Centralização do logo */
     #logou {
         width: 40px;
         position: absolute;
@@ -450,7 +438,6 @@ footer {
         transform: translateX(-50%);
     }
 
-    /* Estrutura do menu hambúrguer */
     #menu-toggle {
         position: absolute;
         opacity: 0;
@@ -482,32 +469,34 @@ footer {
         transition: all 0.3s ease;
     }
 
-    /* Navegação e sobreposição */
     header nav {
         position: fixed;
         top: 0;
-        left: -250px;
-        width: 250px;
-        height: 100vh;
+        left: -300px;
+        width: 300px;
         background-color: #333;
         flex-direction: column;
-        align-items: flex-start;
         padding: 60px 15px 15px;
-        gap: 15px;
         z-index: 5;
         transition: left 0.3s ease;
         box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        height: 100%;
     }
 
     header nav a {
         color: white;
-        padding: 10px;
+        position: relative;
         width: 100%;
-        text-align: left;
+        text-align: right;
+        padding: 5px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        text-decoration: none;
+        display: block;
+        background-color: #333;
     }
-
     .menu-overlay {
         position: fixed;
         top: 0;
@@ -521,14 +510,12 @@ footer {
         transition: opacity 0.3s, visibility 0.3s;
     }
 
-    /* Estados do menu toggle */
     #menu-toggle:checked ~ nav { left: 0; }
     #menu-toggle:checked ~ .menu-overlay { opacity: 1; visibility: visible; }
     #menu-toggle:checked ~ .menu-btn span:nth-child(1) { transform: translateY(16px) rotate(45deg); }
     #menu-toggle:checked ~ .menu-btn span:nth-child(2) { opacity: 0; }
     #menu-toggle:checked ~ .menu-btn span:nth-child(3) { transform: translateY(-16px) rotate(-45deg); }
 
-    /* Estrutura do layout */
     header {
         padding: 8pc 2pc 2pc;
         display: flex;
@@ -553,7 +540,6 @@ footer {
         order: 2;
     }
 
-    /* Estilo dos botões */
     header div {
         position: absolute;
         top: 15px;
@@ -572,7 +558,98 @@ footer {
 
     button { padding: 6px 10px; font-size: 12px; }
 
-    /* Estilo do texto */
     aside h1 { font-size: 20px; text-align: justify; margin-top: 5px; }
     aside a { margin-top: 10px; text-align: center; }
+}
+
+
+.solicitar-orcamento {
+    width: 100%;
+    background-color: #FFD700;
+    color: black;
+    font-size: 16px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.solicitar-orcamento:hover {
+    background-color: black;
+    color: white;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 350px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.modal-content h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.modal-content label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.modal-content textarea {
+    height: 80px;
+    resize: none;
+}
+
+.modal-content button {
+    width: 100%;
+    background-color: #FFD700;
+    color: black;
+    font-size: 16px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 10px;
+}
+
+.modal-content button:hover {
+    background-color: black;
+    color: white;
+}
+
+.close-modal {
+    float: right;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
 }

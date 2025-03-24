@@ -26,10 +26,10 @@
             <a href="#">SERVIÇOS</a>
             <a href="#">SOBRE NÓS</a>
         </nav>
-    <div>
-        <button id="cadastro">Cadastro</button>
-        <button id="entrar">Login</button>
-    </div>
+        <div>
+            <button id="cadastro">Cadastro</button>
+            <button id="entrar">Login</button>
+        </div>
         <aside>
             <h1>Transforme seus sonhos em realidade construção com qualidade, eficiência e confiança em cada detalhe!</h1>
             <a href="#" id="icone"><i class='bx bx-chat'></i><span>Fale Conosco</span></a>
@@ -38,43 +38,45 @@
     </header>
     <main>
         <h2>Projetos</h2>
-            <nav id="servicos">
-                <a href="#">Pintor</a>
-                <a href="#">Telhas</a>
-                <a href="#">Carpinteiro</a>
-                <a href="#">Eletricista</a>
-            </nav>
+        <nav id="servicos">
+            <button class="filter-btn" data-category="all">Todos</button>
+            <button class="filter-btn" data-category="pintor">Pintor</button>
+            <button class="filter-btn" data-category="telhas">Telhas</button>
+            <button class="filter-btn" data-category="carpinteiro">Carpinteiro</button>
+            <button class="filter-btn" data-category="eletricista">Eletricista</button>
+        </nav>
         <section>
-            <article>
+            <article class="project-item pintor">
                 <img src="pintor.jpg">
                 <h5>Pintor</h5>
                 <p>Serviço de pintura para interiores e exteriores.</p><br/>
-                <p id="preco">A partir de R$2100,00</p>
-                <a href="#">Solicite um orçamento</a>
+                <p id="preco">A partir de R$2.100,00</p>
+                <button class="solicitar-orcamento">Solicite um orçamento</button>
             </article>
-            <article>
+            <article class="project-item telhas">
                 <img src="telhas.jpg">
                 <h5>Telhas</h5>
                 <p>Reparo e instalação de telhados residenciais e comerciais.</p><br/>
-                <p id="preco">A partir de R$1800,00</p>
-                <a href="#">Solicite um orçamento</a>
+                <p id="preco">A partir de R$1.800,00</p>
+                <button class="solicitar-orcamento">Solicite um orçamento</button>
             </article>
-            <article>
+            <article class="project-item carpinteiro">
                 <img src="carpinteiro.jpg">
                 <h5>Carpinteiro</h5>
                 <p>Fabricação e reparo de móveis e estruturas em madeira.</p><br/>
-                <p id="preco">A partir de R$1900,00</p>
-                <a href="#">Solicite um orçamento</a>
+                <p id="preco">A partir de R$1.900,00</p>
+                <button class="solicitar-orcamento">Solicite um orçamento</button>
             </article>
-            <article>
+            <article class="project-item eletricista">
                 <img src="eletricista.jpg">
                 <h5>Eletricista</h5>
-                <p>Instalação e manutenção elétrica para sua residência ou empresa.</p><br/>
-                <p id="preco">A partir de R$1500,00</p>
-                <a href="#">Solicite um orçamento</a>
+                <p>Instalação e manutenção elétrica para sua residência.</p><br/>
+                <p id="preco">A partir de R$1.500,00</p>
+                <button class="solicitar-orcamento">Solicite um orçamento</button>
             </article>
         </section>
     </main>
     <footer>© 2025. All Rights Reserved.</footer>
+    <script src="script.js"></script>
 </body>
 </html>
