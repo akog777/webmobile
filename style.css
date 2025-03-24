@@ -199,7 +199,7 @@ article {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    max-width: 650px;
+    max-width: 300px;
     margin: 0 auto;
     width: 90%;
 }
@@ -416,8 +416,6 @@ footer {
     }
 }
 
-#menu-toggle, .menu-btn, .menu-overlay { display: none; }
-
 
 @media screen and (max-width: 500px) {
     body {
@@ -428,7 +426,7 @@ footer {
     }
 
     #p1, #p2 { display: none; }
-    #menu-toggle, .menu-btn, .menu-overlay { display: block; }
+
 
     #logou {
         width: 40px;
@@ -510,11 +508,8 @@ footer {
         transition: opacity 0.3s, visibility 0.3s;
     }
 
-    #menu-toggle:checked ~ nav { left: 0; }
-    #menu-toggle:checked ~ .menu-overlay { opacity: 1; visibility: visible; }
-    #menu-toggle:checked ~ .menu-btn span:nth-child(1) { transform: translateY(16px) rotate(45deg); }
-    #menu-toggle:checked ~ .menu-btn span:nth-child(2) { opacity: 0; }
-    #menu-toggle:checked ~ .menu-btn span:nth-child(3) { transform: translateY(-16px) rotate(-45deg); }
+    nav.open { left: 0; }
+    .menu-overlay.visible { opacity: 1; visibility: visible; }
 
     header {
         padding: 8pc 2pc 2pc;

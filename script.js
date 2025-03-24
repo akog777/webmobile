@@ -67,3 +67,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
     filterProjects('all');
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const nav = document.querySelector("nav");
+    const overlay = document.querySelector(".menu-overlay");
+    const menuBtn = document.querySelector(".menu-btn");
+    const spans = menuBtn.querySelectorAll("span");
+
+    menuToggle.addEventListener("click", function () {
+        const isOpen = nav.classList.toggle("open");
+        overlay.classList.toggle("visible", isOpen);
+        
+        if (isOpen) {
+            spans[0].style.transform = "translateY(16px) rotate(45deg)";
+            spans[1].style.opacity = "0";
+            spans[2].style.transform = "translateY(-16px) rotate(-45deg)";
+        } else {
+            spans[0].style.transform = "";
+            spans[1].style.opacity = "1";
+            spans[2].style.transform = "";
+        }
+    });
+});
