@@ -416,6 +416,8 @@ footer {
     }
 }
 
+#menu-toggle, .menu-btn, .menu-overlay { display: none; }
+
 
 @media screen and (max-width: 500px) {
     body {
@@ -426,7 +428,7 @@ footer {
     }
 
     #p1, #p2 { display: none; }
-
+    #menu-toggle, .menu-btn, .menu-overlay { display: block; }
 
     #logou {
         width: 40px;
